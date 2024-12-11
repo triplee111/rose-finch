@@ -1,0 +1,64 @@
+.DS_Store
+node_modules
+/dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+.editorconfig
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# test config
+cypress.json
+jest.config.js
+
+# webpack inspect file
+output.js
+stats.json
+
+# src app projects
+/src/app/*
+!/src/app/yb
+!/src/app/ub
+!/src/app/jz
+!/src/app/dbcn
+!/src/app/dbvn
+
+/src/app/yb/*
+/src/app/ub/*
+/src/app/jz/*
+/src/app/dbcn/*
+/src/app/dbvn/*
+!/src/app/yb/.gitkeep
+!/src/app/jz/.gitkeep
+!/src/app/dbcn/.gitkeep
+!/src/app/dbvn/.gitkeep
+
+#projects config
+/config/projects.json
+
+# lock file
+# yarn.lock
+# package-lock.json
+
+# production cache
+/cache/
+
+# unfinished
+unfinish

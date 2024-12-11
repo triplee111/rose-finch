@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  dev:
+    container_name: rosefinch-dev
+
+    image: rosefinch:0.1.0
+
+    build:
+      context: .
+      target: development
+      dockerfile: ./Dockerfile
+
+    tty: true
+    stdin_open: true
+
+    privileged: true
+
+    ports:
+      - '8000:8000'
+      - '3310:3310'
+
+    networks:
+      - default
+
+    volumes:
+      - .:/usr/rose-finch
+      # - /usr/src/app/node_modules
+
+    restart: always
+
+networks:
+  default:
+    name: nestjs-network
+    external: true

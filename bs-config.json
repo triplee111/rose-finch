@@ -1,0 +1,10 @@
+{
+  "port": 3310,
+  "files": ["./public/static/**/*.{html,htm,css,js}"],
+  "server": { "baseDir": "./public/static" },
+  "open": false,
+  "cors": true,
+  "middleware": {
+    "0": null
+  }
+}

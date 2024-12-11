@@ -1,0 +1,127 @@
+/* Custom layout style */
+@media (min-width 992px)
+  html:not([dir='rtl'])
+    .sidebar-lg-show
+      &.sidebar-fixed
+        .main
+        .app-footer
+          margin-left 200px
+
+    .sidebar-show
+      &.sidebar-fixed
+        .main
+        .app-footer
+          margin-left 200px
+
+html:not([dir='rtl'])
+  .sidebar
+    margin-left -200px
+    box-shadow 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+
+body
+  background-color #efefef
+
+/* Header */
+@media (min-width 992px)
+  .header-fixed
+    .app-body
+      margin-top 40px
+
+@media (max-width 991.8px)
+  .app-body
+    margin-top 40px
+
+.app-header
+  border-bottom none
+  box-shadow 0 1px 1px 0 rgba(0, 0, 0, 0.1)
+  height 40px
+
+  .breadcrumb
+    line-height 1
+    font-size 0.9rem
+    border-bottom none
+    margin-bottom 0
+
+    .breadcrumb-item
+      span.active
+        color #999
+
+  .navbar-brand
+    width 150px
+    height auto
+
+  .navbar-nav
+    &.ml-auto
+      padding-right 2.5rem
+
+    .nav-link
+      > .img-avatar
+        height 31px
+
+      .name-avatar
+        &::after
+          content '\f107'
+          font-family FontAwesome
+          text-decoration inherit
+          display inline-block
+          vertical-align middle
+          margin-left 0.6rem
+
+.header-fixed
+  .app-header
+    top 0
+    z-index 1030
+
+/* Content */
+.app-body
+  .main
+    background-color #eeeded
+
+/* Sidebar */
+.sidebar
+  .nav-title
+    color rgba(255, 255, 255, 0.6)
+
+  .nav-item
+    font-weight 500
+    font-size 0.9rem
+
+    .nav-link
+      &.active
+        background-color #1e2129
+
+      &:hover
+        background-color #26a69a
+        color #ffffff
+
+@media (min-width 992px)
+  .sidebar-fixed
+    .sidebar
+      width 200px
+
+    &.sidebar-minimized
+      .sidebar
+        width 50px
+
+@media (min-width 992px)
+  .sidebar-fixed
+    .app-header
+      &+.app-body
+        .sidebar
+          height calc(100vh - 40px)
+          top 40px
+
+@media (max-width 991.98px)
+  .sidebar
+    height calc(100vh - 40px)
+    top 40px
+
+/* Container */
+.container-fluid
+  margin-top 3rem
+  padding-left 0.75rem
+  padding-right 0.75rem
+
+/* Card */
+.card-body
+  padding 0.75rem 1.25rem

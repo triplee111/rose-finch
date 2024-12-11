@@ -1,0 +1,44 @@
+- var actName = process.env.VUE_APP_TITLE
+
+//- 共用 assets
+- var globalAssetsUrl = process.env.VUE_APP_GLOBAL_ASSETS_URL
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge,chrome=1")
+    meta(name="renderer" content="webkit")
+    meta(name="description" content="activity admin panel")
+    link(rel="icon" href=globalAssetsUrl + "favicon.ico")
+
+    //- bootstrap-vue
+    link(type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css")
+    //- fontawesome
+    link(type="text/css" rel="stylesheet" href=globalAssetsUrl + "plugin/fontawesome_4.7/css/font-awesome.min.css")
+    //- simple-line-icons
+    link(type="text/css" rel="stylesheet" href=globalAssetsUrl + "plugin/simplelineicons_2.4/css/simple-line-icons.css")
+
+    //- main style
+    link(type="text/css" rel="stylesheet" href=globalAssetsUrl + "coreui.min.css")
+    link(type="text/css" rel="stylesheet" href=globalAssetsUrl + "custom.min.css")
+
+    //- jQuery
+    script(type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js")
+
+    title #{actName}
+
+  body
+    noscript
+      strong
+        | Why you disable javascript.
+
+    //- vue entry
+    div#app
+
+    script(src="https://unpkg.com/xlsx/dist/xlsx.core.min.js")
+    script.
+      var ACTIVITY_NAME = '{actName}'
+      var ACTIVITY_ID = '{actId}'
+      var ACTIVITY_DURATION = '{duration}'
+    //- built files will be auto injected here

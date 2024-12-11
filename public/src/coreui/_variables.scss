@@ -1,0 +1,23 @@
+/* Variable overrides */
+
+$gray-vue: #35495e !default;
+$green-vue: #4fc08c !default;
+$green-cyan: #26a69a !default;
+$blue: #20a8d8 !default;
+
+/*
+$cyan: #17a2b8;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #f86c6b;
+$orange: #f8cb00;
+$yellow: #ffc107;
+$green: #4dbd74;
+$teal: #20c997;
+$light-blue: #63c2de;
+*/
+
+$primary: $green-cyan;
+$secondary: $gray-vue;
+$success: $blue;

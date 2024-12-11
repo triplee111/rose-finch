@@ -1,0 +1,7 @@
+/node_modules/**
+/dist/**
+/tests/unit/coverage/**
+
+yarn.lock
+yarn-error.log
+.gitignore

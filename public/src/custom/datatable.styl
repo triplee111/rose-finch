@@ -1,0 +1,105 @@
+/* Custom datatable style */
+.table-wrapper
+  margin-left -1.25rem
+  margin-right -1.25rem
+  margin-bottom -1.25rem
+
+  .handsontable
+    /* Fix wtHolder auto width & height bug */
+    .wtHolder
+      width 100% !important
+      height 100% !important
+
+    .ht_clone_left
+      .wtHolder
+        overflow hidden
+
+        tr
+          &:not(:last-child)
+            th
+              border-bottom 1px solid rgba(0, 0, 0, 0.125)
+
+/* Custom material style */
+.handsontable
+  thead
+    tr
+      &:first-child
+        th
+          border-top 1px solid rgba(0, 0, 0, 0.125)
+
+    th
+      background-color #fbfbfb
+      text-align left
+      font-weight 500
+      font-size 0.8rem
+      padding-top 0.7rem
+      padding-left 1rem
+
+  tbody
+    th
+      background-color #ffffff !important
+
+  .ht_clone_top
+    thead
+      th
+        border-right none
+        border-left none !important
+
+    for row in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+      tr.asc-{row}
+        th:nth-child({row})
+          div::after
+            content '\f0d8'
+
+      tr.desc-{row}
+        th:nth-child({row})
+          div::after
+            content '\f0d7'
+
+      tr.asc-{row}
+      tr.desc-{row}
+        th:nth-child({row})
+          div::after
+            position absolute
+            font normal normal normal 1rem / 1.25 FontAwesome
+            text-decoration inherit
+            right 1.5rem
+
+  .ht_clone_top_left_corner
+    th
+      border-left none
+      border-right none
+
+  .ht_clone_left
+    tr
+      th
+        font-size 0.8rem
+        color #777777
+        border-left none
+        vertical-align middle
+
+      &:last-child
+        th
+          opacity 0
+          border-right none
+          border-bottom none
+
+        .rowHeader
+          display inline-block
+          vertical-align middle
+
+  .ht_master
+    tbody
+      tr
+        td
+          padding 0.75rem 1.25rem
+          border-right none
+          border-bottom 1px solid rgba(0, 0, 0, 0.125)
+
+          &:nth-child(2)
+            border-left none !important
+
+        &:last-child
+          td
+            font-weight 600
+            border-bottom none
